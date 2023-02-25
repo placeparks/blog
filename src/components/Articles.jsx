@@ -23,6 +23,7 @@ const [comments, setComments]= useState("");
 
   return (
     <div>
+    <div className="homepage">
       {articles.length === 0 ? (
         <p>No articles found!</p>
       ) : (
@@ -36,7 +37,7 @@ const [comments, setComments]= useState("");
             createdBy,
             userId,
           }) => (
-            <div className="homepage" key={id}>
+            <div  key={id}>
               <div className="row-3">
               {isAuth && <DeleteArticle id={id} imageUrl={imageUrl} />}
                 <div>
@@ -68,6 +69,7 @@ const [comments, setComments]= useState("");
           )
         )
       )}
+      </div>
        <Comments />
     </div>
   );
