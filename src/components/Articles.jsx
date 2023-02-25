@@ -44,7 +44,7 @@ const [comments, setComments]= useState("");
                    <img
                       src={imageUrl}
                       alt="title"
-                      style={{ height: 180, width: 180, marginTop: -20,}}
+                      style={{ height: 180, width: 180, marginTop: -30,}}
                     />
                
                 </div>
