@@ -23,7 +23,9 @@ const [comments, setComments]= useState("");
 
   return (
     <div>
-    <div className="homepage">
+      
+      <div className="homePage">
+     
       {articles.length === 0 ? (
         <p>No articles found!</p>
       ) : (
@@ -37,14 +39,14 @@ const [comments, setComments]= useState("");
             createdBy,
             userId,
           }) => (
-            <div  key={id}>
-              <div className="row-3">
+            <div className="post">
+            <div key={id}>
               {isAuth && <DeleteArticle id={id} imageUrl={imageUrl} />}
                 <div>
                    <img
                       src={imageUrl}
-                      alt="title"
-                      style={{ height: 180, width: 180, marginTop: -30,}}
+                      alt="img"
+                      style={{ height: "40%", width: "50%", marginLeft: "23%"}}
                     />
                
                 </div>
@@ -59,17 +61,17 @@ const [comments, setComments]= useState("");
                   
                     </div>
                   </div >
-                  <h3 className="postTextContainer">{title}</h3>
+                  <h3 style={{marginTop: "12px", marginLeft: "-10px"}}>{title}</h3>
+                  </div>
                   <p>{createdAt.toDate().toDateString()}</p>
-                  <h5>{description}</h5>
-
-                </div>
+                  <h5 className="postTextContainer" >{description}</h5>
               </div>
             </div>
           )
         )
       )}
       </div>
+    
        <Comments />
     </div>
   );
