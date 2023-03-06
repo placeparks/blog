@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+.articles{
+  display:inline-flex;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -122,36 +124,23 @@ textarea {
 
 .homePage {
   width: 100%;
-  min-height: calc(100vh - 80px);
-  height: auto;
   display: flex ;
   flex-direction: row;
   align-items: left;
   padding-top: 20px;
 }
 
-.homepage {
-  width: 400px;
+.homePage .post {
+  width: 30%;
   height: auto;
-  max-height: 500px;
+  max-height: 400px;
   background-color: rgb(224, 239, 243);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   overflow: hidden;
   margin: 20px;
   padding: 20px;
   border-radius: 15px;
-  display: inline-block;
   
-}
-
-.post .postHeader {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.postHeader .title {
-  flex: 50%;
 }
 
 .deletePost button {
@@ -162,10 +151,10 @@ textarea {
   cursor: pointer;
 }
 
-.post .postTextContainer {
+.postTextContainer {
   word-wrap: break-word;
-  height: auto;
-  max-height: 400px;
+  height: 120px;
+  max-height: 300px;
   width: 100%;
   overflow: hidden;
   overflow-y: auto;
@@ -250,18 +239,26 @@ textarea {
 .App-link {
   color: #61dafb;
 }
-.homepage {
-  margin-left: 10px;
-  display: block;
-  width: 300px;
+
+.homePage {
+  width: 100%;
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.homePage .post {
+  width: 80%;
   height: auto;
-  max-height: 300px;
-  overflow: hidden;
+  max-height: 400px;
   background-color: rgb(224, 239, 243);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
+  overflow: hidden;
+  margin: 20px;
   padding: 20px;
   border-radius: 15px;
+  
 }
 
 .post .postHeader {
@@ -270,9 +267,7 @@ textarea {
   width: 100%;
 }
 
-.postHeader .title {
-  flex: 50%;
-}
+
 .postHeader .deletePost {
   flex: 50%;
   display: flex;
@@ -288,14 +283,6 @@ textarea {
   cursor: pointer;
 }
 
-.post .postTextContainer {
-  word-wrap: break-word;
-  height: auto;
-  max-height: 400px;
-  width: 100%;
-  overflow: hidden;
-  overflow-y: auto;
-}
 .welcome-note{
   margin-top: 150px;
   margin-left:15px;
